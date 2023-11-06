@@ -17,7 +17,6 @@ always_ff @(posedge clk) begin
     if (writeEn == 1'b1)
         ram_array[writeAddr] <= mic_signal;
     if (readEn == 1'b1)
-        // output is synchronous
         delayed_signal <= ram_array [readAddr];
 end
 
